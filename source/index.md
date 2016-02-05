@@ -3325,7 +3325,7 @@ https://bartender.dstillery.com/openbar-api/v2/campaigns/ca1000001/conversion-ev
 
 # Geo-audiences
 <a name="updateGeoAudienceForClient"></a>
-## Update Geo Audience
+## Update Geo Audience for Client
 <aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
 
 ### Description
@@ -3368,7 +3368,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/g
 `
 
 <a name="getEligibleGeoTypesForClient"></a>
-## Get Eligible Geo Types
+## Get Eligible Geo Types for Client
 <aside class="notice">GET v2/clients/{clientSlug}/eligible-geo-types </aside>
 
 ### Description
@@ -3417,7 +3417,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/eligible-geo-ty
 `
 
 <a name="activateGeoAudienceForClient"></a>
-## Activate Geo Audiences
+## Activate Geo Audiences for Client
 <aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
 
 ### Description
@@ -3452,7 +3452,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/g
 `
 
 <a name="deactivateGeoAudienceForClient"></a>
-## Deactivate Geo Audiences
+## Deactivate Geo Audiences for Client
 <aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
 
 ### Description
@@ -3486,8 +3486,8 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027/active
 `
 
-<a name="getAllEligibleGeotypesforgeo-audience"></a>
-## Get All Eligible Geotypes
+<a name="getAllEligibleGeoTypesForGeoAudience"></a>
+## Get All Eligible Geotypes for Advertiser
 <aside class="notice">GET /v2/advertisers/{advertiserSlug}/eligible-geo-types</aside>
 
 ### Description
@@ -3538,7 +3538,7 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/eligible-geo-types
 `
 <a name="UpdateGeoAudience"></a>
-## Update a Geo Audience
+## Update a Geo Audience for Advertiser
 <aside class="notice">PUT /v2/advertisers/{advertiserSlug}/{geoAudienceSlug}</aside>
 
 ### Description
@@ -3576,12 +3576,12 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1001273/geo-audiences/geo1008948
 `
 <a name="UpdateGeoAudience"></a>
-## Activate/Deactivate a Geo Audience
+## Activate Geo Audience for Advertiser
 <aside class="notice">PUT /v2/advertisers/{advertiserSlug}/{geoAudienceSlug}/active</aside>
 
 ### Description
 
-Activate/De-activate Geo Audience.
+Activate Geo Audience.
 
 ### Example
 
@@ -3590,7 +3590,42 @@ Request Body:
 ```
 ```
                 {
-                "active":true
+                "active": true
+                }
+```
+```
+Response Code:
+```
+```
+                204 No Content
+```
+```
+Response Body:
+```
+```
+                EMPTY
+``` 
+
+`
+https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1001273/geo-audiences/geo1008948/active
+`
+
+<a name="UpdateGeoAudience"></a>
+## Deactivate Geo Audience for Advertiser
+<aside class="notice">PUT /v2/advertisers/{advertiserSlug}/{geoAudienceSlug}/active</aside>
+
+### Description
+
+Deactivate Geo Audience.
+
+### Example
+
+```
+Request Body:
+```
+```
+                {
+                "active": false
                 }
 ```
 ```
