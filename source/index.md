@@ -37,7 +37,7 @@ Get details about specific client.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -76,7 +76,7 @@ Get all advertisers.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 
 ```
 ```
@@ -163,12 +163,12 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/advertisers
 `
 
 <a name="addGeoAudienceToClient"></a>
-## Add Geo Audience to a Client
+## Create a Geo Audience
 <aside class="notice">POST v2/clients/{clientSlug}/geo-audiences</aside>
 
 ### Description
 
-Add a new Geo Audience to Client.
+Add a new Geo Audience to a Client.
 
 ### Example
 
@@ -218,6 +218,7 @@ Response Body:
 `
 https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
 `
+
 <a name="getGeoAudiencesForClient"></a>
 ## Get All Geo Audiences
 <aside class="notice">GET v2/clients/{clientSlug}/geo-audiences</aside>
@@ -404,7 +405,7 @@ Get details about specific advertiser.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 
 ```
 ```
@@ -447,7 +448,7 @@ Get Advertiser details by the Third Party ID set by  the client.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -487,7 +488,7 @@ Get all Advertiser Campaigns.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -543,7 +544,7 @@ Get all Advertiser Creatives.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -597,7 +598,7 @@ Get all Advertiser Source Audiences.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -649,7 +650,7 @@ Get all Advertiser App Domain list.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -692,7 +693,7 @@ Get all Advertiser geo-audiences.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -738,7 +739,7 @@ Get all Advertiser Target Group Templates.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -886,7 +887,7 @@ Get Eligible Segments for an Advertiser.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -964,7 +965,7 @@ Dstillery works with a number of inventory supply partners or networks.  This ca
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -1023,7 +1024,7 @@ Get the Device Types an Advertiser may access.  Available device types are:
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -1068,7 +1069,7 @@ Get Audience Segments for an Advertiser.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -1110,7 +1111,7 @@ Get the list of eligible third party ad servers for an Advertiser.  This is the 
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2074,7 +2075,7 @@ Get details about specific creative.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2140,7 +2141,7 @@ Get Creative's Attributes.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2230,7 +2231,7 @@ Get a Creative details by the Third Party ID.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2518,7 +2519,7 @@ Get details about a specific campaign.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2582,7 +2583,7 @@ Get all Campaign Target Groups.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -2670,7 +2671,7 @@ Get all Campaign Conversion Event Trackers.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3076,7 +3077,7 @@ Get details about a source audience.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3118,7 +3119,7 @@ Get a Source Audience Pixel Code.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3271,7 +3272,7 @@ This call can be used to assign a Conversion Event Tracker.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3304,7 +3305,7 @@ This call can be used to unassign a Conversion Event Tracker.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3323,7 +3324,7 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/campaigns/ca1000001/conversion-event-trackers/123
 `
 
-# Geo-audiences
+# Geo Audiences
 <a name="updateGeoAudienceForClient"></a>
 ## Update Geo Audience for Client
 <aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
@@ -3500,7 +3501,7 @@ Get all Eligible Geotypes of geo-audiences.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3666,7 +3667,7 @@ Get details about a specific target group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3872,7 +3873,7 @@ Get a Target Group by Third Party ID.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -3965,7 +3966,7 @@ Get the Targets Currently Assigned to a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -4009,7 +4010,7 @@ Get Eligible Segments for an Advertiser via the TargetGroup Id.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -4087,7 +4088,7 @@ Get Devices and OS for a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -4620,7 +4621,7 @@ Get Assigned Creatives for a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5212,7 +5213,7 @@ Add a Creative to a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5312,7 +5313,7 @@ Delete a Target from a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5345,7 +5346,7 @@ Delete a Creative from a Target Group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5379,7 +5380,7 @@ Delete a device type target from a target group.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5580,7 +5581,7 @@ Get tags.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
@@ -5767,7 +5768,7 @@ Get name of industry given id.
 Request Body:
 ```
 ```
-                None
+                EMPTY
 ```
 ```
 Response Code:
