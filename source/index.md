@@ -162,6 +162,204 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/advertisers
 `
 
+<a name="addGeoAudienceToClient"></a>
+## Add Geo Audience to a Client
+<aside class="notice">POST v2/clients/{clientSlug}/geo-audiences</aside>
+
+### Description
+
+Add a new Geo Audience to Client.
+
+### Example
+
+```
+Request Body:
+```
+```
+                {
+                    "geoAudienceDescr": "API Request for Geo",
+                    "levelType": [
+                        "GeoPairVisit"
+                    ],
+                    "geoType": "MGRS_10",
+                    "geoIds": [
+                        "81321C005",
+                        "81321C004",
+                        "81321C002",
+                        "81321R004",
+                        "81321C001",
+                        "81321C003",
+                        "81321R003",
+                        "81321R002",
+                        "87301C010",
+                        "87301H033"
+                    ]
+                }
+```
+```
+Response Code:
+```
+```
+                200 OK
+```
+```
+Response Body:
+```
+```
+                [
+                    {
+                        "marketerGeoAudienceId": 4,
+                        "segmentId": 155895,
+                        "isHome": false
+                    }
+                ]
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
+`
+<a name="getGeoAudiencesForClient"></a>
+## Get All Geo Audiences
+<aside class="notice">GET v2/clients/{clientSlug}/geo-audiences</aside>
+
+### Description
+
+Get All Geo Audiences.
+
+### Example
+
+```
+Request Body:
+```
+```
+                EMPTY
+```
+```
+Response Code:
+```
+```
+                200 OK
+```
+```
+Response Body:
+```
+```
+                [
+                    {
+                        "id": "geo1009027",
+                        "name": "Test GeoAudience Integration12",
+                        "geoCount": 2,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009028",
+                        "name": "Test GeoAudience Integration1",
+                        "geoCount": 2,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009029",
+                        "name": "test1234",
+                        "geoCount": 20000,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009035",
+                        "name": "TestGeo",
+                        "geoCount": 15,
+                        "active": false,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009037",
+                        "name": "Test123",
+                        "geoCount": 20000,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009039",
+                        "name": "Test12",
+                        "geoCount": 8739,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009040",
+                        "name": "New Geo",
+                        "geoCount": 20000,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009042",
+                        "name": "Mac",
+                        "geoCount": 3,
+                        "active": true,
+                        "createdAt": "2016-02-02"
+                    },
+                    {
+                        "id": "geo1009011",
+                        "name": "Geo MGRS 10",
+                        "geoCount": 10,
+                        "active": true,
+                        "createdAt": "2016-02-03"
+                    }
+                ]
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
+`
+
+<a name="getGeoAudienceForClient"></a>
+## Get a specific Geo Audience
+<aside class="notice">GET v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
+
+### Description
+
+Get a specific Geo Audience.
+
+### Example
+
+```
+Request Body:
+```
+```
+                EMPTY
+```
+```
+Response Code:
+```
+```
+                200 OK
+```
+```
+Response Body:
+```
+```
+                {
+                    "geoIds":
+                    [
+                        "abc123456",
+                        "bcd123456"
+                    ],
+                    "geoAudienceDescr": "Test GeoAudience Integration12",
+                    "levelType":
+                    [
+                        "GeoPairVisit"
+                    ],
+                    "geoType": "MGRS_10"
+                }
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027
+`
+
 <aside class="notice">Probable Failure Scenarios</aside>
 
 ### Response Code
@@ -3093,7 +3291,7 @@ https://bartender.dstillery.com/openbar-api/v2/campaigns/ca1000001/conversion-ev
 `
 
 <a name="unassignConversionEventTrackers"></a>
-## Delete a Conversion Event Trackers
+## Unassign a Conversion Event Trackers
 <aside class="notice">PUT /v2/campaigns/{CAMPAIGN_ID}/conversion-event-trackers/{offerLevelId}</aside>
 
 ### Description
@@ -3126,6 +3324,168 @@ https://bartender.dstillery.com/openbar-api/v2/campaigns/ca1000001/conversion-ev
 `
 
 # Geo-audiences
+<a name="updateGeoAudienceForClient"></a>
+## Update Geo Audience
+<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
+
+### Description
+
+Update Geo Audience.
+
+### Example
+
+```
+Request Body:
+```
+```
+                {
+                    "geoAudienceDescr": "Test GeoAudience Integration",
+                    "levelType": [
+                        "GeoPairVisit"
+                    ],
+                    "geoType": "MGRS_10",
+                    "geoIds": [
+                        "abc123456",
+                        "bcd123456"
+                    ]
+                }
+```
+```
+Response Code:
+```
+```
+                204 No Content
+```
+```
+Response Body:
+```
+```
+                EMPTY
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027
+`
+
+<a name="getEligibleGeoTypesForClient"></a>
+## Get Eligible Geo Types
+<aside class="notice">GET v2/clients/{clientSlug}/eligible-geo-types </aside>
+
+### Description
+
+Get Eligible Geo Types.
+
+### Example
+
+```
+Request Body:
+```
+```
+                EMPTY
+```
+```
+Response Code:
+```
+```
+                200 OK
+```
+```
+Response Body:
+```
+```
+                {
+                    "geoTypes":
+                    [
+                        {
+                            "name": "MGRS_10"
+                        },
+                        {
+                            "name": "MGRS_100"
+                        },
+                        {
+                            "name": "MGRS_1000"
+                        },
+                        {
+                            "name": "ZIP4"
+                        }
+                    ]
+                }
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/eligible-geo-types
+`
+
+<a name="activateGeoAudienceForClient"></a>
+## Activate Geo Audiences
+<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
+
+### Description
+
+Activate Geo Audiences.
+
+### Example
+
+```
+Request Body:
+```
+```
+                {
+                    "active": true
+                }
+```
+```
+Response Code:
+```
+```
+                204 No Content
+```
+```
+Response Body:
+```
+```
+                EMPTY
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027/active
+`
+
+<a name="deactivateGeoAudienceForClient"></a>
+## Deactivate Geo Audiences
+<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
+
+### Description
+
+Deactivate Geo Audiences.
+
+### Example
+
+```
+Request Body:
+```
+```
+                {
+                    "active": false
+                }
+```
+```
+Response Code:
+```
+```
+                204 No Content
+```
+```
+Response Body:
+```
+```
+                EMPTY
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027/active
+`
+
 <a name="getAllEligibleGeotypesforgeo-audience"></a>
 ## Get All Eligible Geotypes
 <aside class="notice">GET /v2/advertisers/{advertiserSlug}/eligible-geo-types</aside>
@@ -5001,367 +5361,6 @@ Response Body:
 
 `
 https://bartender.dstillery.com/openbar-api/v2/target-groups/ta1050053/targets/device_type
-`
-
-<a name="getGeoAudiencesForClient"></a>
-## Get All Geo Audiences
-<aside class="notice">GET v2/clients/{clientSlug}/geo-audiences</aside>
-
-### Description
-
-Get All Geo Audiences.
-
-### Example
-
-```
-Request Body:
-```
-```
-                EMPTY
-```
-```
-Response Code:
-```
-```
-                200 OK
-```
-```
-Response Body:
-```
-```
-                [
-                    {
-                        "id": "geo1009027",
-                        "name": "Test GeoAudience Integration12",
-                        "geoCount": 2,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009028",
-                        "name": "Test GeoAudience Integration1",
-                        "geoCount": 2,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009029",
-                        "name": "test1234",
-                        "geoCount": 20000,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009035",
-                        "name": "TestGeo",
-                        "geoCount": 15,
-                        "active": false,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009037",
-                        "name": "Test123",
-                        "geoCount": 20000,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009039",
-                        "name": "Test12",
-                        "geoCount": 8739,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009040",
-                        "name": "New Geo",
-                        "geoCount": 20000,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009042",
-                        "name": "Mac",
-                        "geoCount": 3,
-                        "active": true,
-                        "createdAt": "2016-02-02"
-                    },
-                    {
-                        "id": "geo1009011",
-                        "name": "Geo MGRS 10",
-                        "geoCount": 10,
-                        "active": true,
-                        "createdAt": "2016-02-03"
-                    }
-                ]
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
-`
-
-<a name="addGeoAudienceToClient"></a>
-## Add Geo Audience to a Client
-<aside class="notice">POST v2/clients/{clientSlug}/geo-audiences</aside>
-
-### Description
-
-Add a new Geo Audience to Client.
-
-### Example
-
-```
-Request Body:
-```
-```
-                {
-                    "geoAudienceDescr": "API Request for Geo",
-                    "levelType": [
-                        "GeoPairVisit"
-                    ],
-                    "geoType": "MGRS_10",
-                    "geoIds": [
-                        "81321C005",
-                        "81321C004",
-                        "81321C002",
-                        "81321R004",
-                        "81321C001",
-                        "81321C003",
-                        "81321R003",
-                        "81321R002",
-                        "87301C010",
-                        "87301H033"
-                    ]
-                }
-```
-```
-Response Code:
-```
-```
-                200 OK
-```
-```
-Response Body:
-```
-```
-                [
-                    {
-                        "marketerGeoAudienceId": 4,
-                        "segmentId": 155895,
-                        "isHome": false
-                    }
-                ]
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
-`
-
-<a name="updateGeoAudienceForClient"></a>
-## Update Geo Audience
-<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
-
-### Description
-
-Update Geo Audience.
-
-### Example
-
-```
-Request Body:
-```
-```
-                {
-                    "geoAudienceDescr": "Test GeoAudience Integration",
-                    "levelType": [
-                        "GeoPairVisit"
-                    ],
-                    "geoType": "MGRS_10",
-                    "geoIds": [
-                        "abc123456",
-                        "bcd123456"
-                    ]
-                }
-```
-```
-Response Code:
-```
-```
-                204 No Content
-```
-```
-Response Body:
-```
-```
-                EMPTY
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027
-`
-
-<a name="getGeoAudienceForClient"></a>
-## Get a specific Geo Audience
-<aside class="notice">GET v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
-
-### Description
-
-Get a specific Geo Audience.
-
-### Example
-
-```
-Request Body:
-```
-```
-                EMPTY
-```
-```
-Response Code:
-```
-```
-                200 OK
-```
-```
-Response Body:
-```
-```
-                {
-                    "geoIds":
-                    [
-                        "abc123456",
-                        "bcd123456"
-                    ],
-                    "geoAudienceDescr": "Test GeoAudience Integration12",
-                    "levelType":
-                    [
-                        "GeoPairVisit"
-                    ],
-                    "geoType": "MGRS_10"
-                }
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027
-`
-
-<a name="getEligibleGeoTypesForClient"></a>
-## Get Eligible Geo Types
-<aside class="notice">GET v2/clients/{clientSlug}/eligible-geo-types </aside>
-
-### Description
-
-Get Eligible Geo Types.
-
-### Example
-
-```
-Request Body:
-```
-```
-                EMPTY
-```
-```
-Response Code:
-```
-```
-                200 OK
-```
-```
-Response Body:
-```
-```
-                {
-                    "geoTypes":
-                    [
-                        {
-                            "name": "MGRS_10"
-                        },
-                        {
-                            "name": "MGRS_100"
-                        },
-                        {
-                            "name": "MGRS_1000"
-                        },
-                        {
-                            "name": "ZIP4"
-                        }
-                    ]
-                }
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/eligible-geo-types
-`
-
-<a name="activateGeoAudienceForClient"></a>
-## Activate Geo Audiences
-<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
-
-### Description
-
-Activate Geo Audiences.
-
-### Example
-
-```
-Request Body:
-```
-```
-                {
-                    "active": true
-                }
-```
-```
-Response Code:
-```
-```
-                204 No Content
-```
-```
-Response Body:
-```
-```
-                EMPTY
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027/active
-`
-
-<a name="deactivateGeoAudienceForClient"></a>
-## Deactivate Geo Audiences
-<aside class="notice">PUT v2/clients/{clientSlug}/geo-audiences/{geoAudienceSlug}/active</aside>
-
-### Description
-
-Deactivate Geo Audiences.
-
-### Example
-
-```
-Request Body:
-```
-```
-                {
-                    "active": false
-                }
-```
-```
-Response Code:
-```
-```
-                204 No Content
-```
-```
-Response Body:
-```
-```
-                EMPTY
-```
-
-`
-https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/geo1009027/active
 `
 
 # All Target Types
