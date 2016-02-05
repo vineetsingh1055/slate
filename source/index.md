@@ -5786,8 +5786,8 @@ The table below describes the response codes that will be issued and gives poten
 
 * [/v2/clients/{CLIENT_ID}](#getClient) GET: Get a Client
 * [/v2/clients/{CLIENT_ID}/advertisers](#addAdvertiserToClient) POST: Add an Advertiser to a Client
-* [/v2/clients/{CLIENT_ID}/geo-audiences](#getGeoAudiencesForClient) GET: Get Geo Audiences for an Client
-* [/v2/clients/{CLIENT_ID}/geo-audiences](#addGeoAudienceToClient) POST: Add a Geo Audience to an Client
+* [/v2/clients/{CLIENT_ID}/geo-audiences](#getGeoAudiencesForClient) GET: Get Geo Audiences for a Client
+* [/v2/clients/{CLIENT_ID}/geo-audiences](#addGeoAudienceToClient) POST: Add a Geo Audience for a Client
 
 ## Advertisers
 
@@ -5805,9 +5805,9 @@ The table below describes the response codes that will be issued and gives poten
 * [/v2/advertisers/{ADVERTISER_ID}/eligible-ad-servers](#getEligibleAdServersForAdvertiser) GET: Get Eligible Ad Servers for an Advertiser
 * [/v2/advertisers/{ADVERTISER_ID}/creatives](#getAssignedCreativesForAdvertiser) GET: Get Assigned Creatives for an Advertiser
 * [/v2/advertisers/{advertiserSlug}/geo-audiences](#getGeoAudiencesForAdvertiser) GET: Get Geo Audiences for an Advertiser
-* [/v2/advertisers/{ADVERTISER_ID}/geo-audiences](#addGeoAudienceToAdvertiser) POST: Add a Geo Audience to an Advertiser
-* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#getAppDomainListsForAdvertiser) GET: Get App Domain Lists for an Advertiser.
-* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#addAppDomainListsToAdvertiser) POST: Add a App Domain Lists to an Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/geo-audiences](#addGeoAudienceToAdvertiser) POST: Add a Geo Audience for a Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#getAppDomainListsForAdvertiser) GET: Get App Domain Lists for a Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#addAppDomainListsToAdvertiser) POST: Add a App Domain Lists
 
 ## Campaigns
 
@@ -5817,12 +5817,12 @@ The table below describes the response codes that will be issued and gives poten
 * [/v2/campaigns/{CAMPAIGN_ID}/target-groups](#addTargetGroup) POST: Add a Target Group to a Campaign
 * [/v2/campaigns/{CAMPAIGN_ID}/target-groups](#addTargetGroupWithDeviceTypes) POST: Add a Target Group with DeviceTypes Targets to a Campaign
 * [/v2/campaigns/{CAMPAIGN_ID}/target-groups-tpid/{THIRD_PARTY_ID}](#getCampaignByThirdPartyId) GET: Get a Target Group by Third Party ID
-* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker] (#getConversionEventTrackerForCampaign) GET: Get a conversion-event-tracker
+* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker](#getConversionEventTrackerForCampaign) GET: Get a conversion-event-tracker
 
 ## conversion-event-tracker
 
-* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker/{OFFER_LEVEL_ID}] (#assignConversionEventTrackerForCampaign) PUT: Update a conversion-event-tracker
-* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker/{OFFER_LEVEL_ID}] (#unassignConversionEventTrackerForCampaign) DELETE: Delete conversion-event-tracker
+* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker/{OFFER_LEVEL_ID}](#assignConversionEventTrackerForCampaign) PUT: Assign a Conversion-Event-Tracker
+* [/v2/campaigns/{CAMPAIGN_ID}/conversion-event-tracker/{OFFER_LEVEL_ID}](#unassignConversionEventTrackerForCampaign) DELETE: Unassign a Conversion-Event-Tracker
 
 ## Creatives
 
@@ -5844,19 +5844,19 @@ The table below describes the response codes that will be issued and gives poten
 
 ## Geo Audience
 
-* [/v2/clients/{CLIENT_ID}/eligible-geo-types] (#getEligibleGeoTypesForClient) GET: Get a Eligible-geo-types for Client Geo Audience
-* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}] (#updateGeoAudienceForClient) PUT: Update a Client Geo Audience
-* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}] (#getGeoAudienceForClient) GET: Get a Geo Audience
-* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}/active] (#activateOrDeactivateGeoAudienceForClient) PUT: Activate/Deactivate a Client Geo Audience
-* [/v2/advertisers/{ADVERTISER_ID}/eligible-geo-types] (#getEligibleGeoTypesForAdvertiser) GET: Get a Eligible-geo-types for Geo Audience
-* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}] (#getGeoAudienceForAdvertiser) GET: Get a Geo Audience 
-* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}] (#updateGeoAudienceForAdvertiser) PUT: Update a Geo Audience
-* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}/active] (#activateOrDeactivateGeoAudienceForAdvertiser) PUT: Activate/Deactivate a Geo Audience
+* [/v2/clients/{CLIENT_ID}/eligible-geo-types](#getEligibleGeoTypesForClient) GET: Get Eligible-Geo-Types for Client
+* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}](#updateGeoAudienceForClient) PUT: Update Geo Audience for Client
+* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}](#getGeoAudienceForClient) GET: Get Geo Audience for Client
+* [/v2/clients/{CLIENT_ID}/{GEO_AUDIENCE_ID}/active](#activateOrDeactivateGeoAudienceForClient) PUT: Activate/Deactivate Geo Audience for Client
+* [/v2/advertisers/{ADVERTISER_ID}/eligible-geo-types](#getEligibleGeoTypesForAdvertiser) GET: Get Eligible-Geo-Types for Geo Audience for Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}](#getGeoAudienceForAdvertiser) GET: Get Geo Audience  for Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}](#updateGeoAudienceForAdvertiser) PUT: Update Geo Audience for Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/{GEO_AUDIENCE_ID}/active](#activateOrDeactivateGeoAudienceForAdvertiser) PUT: Activate/Deactivate Geo Audience for Advertiser
 
 ## APP DOMAIN LIST
 
-* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists/{APP_DOMAIN_LIST_ID}/copy] (#copyAppDomainListForAdvertiser) POST: Create copy of app domain list
-* [/v2/app-domain-lists/{APP_DOMAIN_LIST_ID] (#updateAppDomainListForAdvertiser) PUT: Update APP DOMAIN LIST
+* [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists/{APP_DOMAIN_LIST_ID}/copy](#copyAppDomainListForAdvertiser) POST: Create a copy of App Domain List
+* [/v2/app-domain-lists/{APP_DOMAIN_LIST_ID](#updateAppDomainListForAdvertiser) PUT: Update a App Domain List
 
 ## Target Groups
 
@@ -5875,7 +5875,7 @@ The table below describes the response codes that will be issued and gives poten
 * [/v2/target-groups/eligible-device-types](#getEligibleDeviceTypesForAdvertiser) GET: Get Eligible Device Types for an Advertiser
 * [/v2/target-groups/{TARGET_GROUP_ID}/targets/{TARGET_TYPE}](#getAssignedTargetsToTargetGroup) GET: Get Assigned Targets to a TargetGroup
 * [/v2/devices](#getDevices) GET: Get Devices and OS for a Target Group
-* [/v2/target-groups/{TARGET_GROUP_ID}/creatives] (#getAssignedCreativesForTargetGroup) GET: Get Assigned Creatives for a Target Group
+* [/v2/target-groups/{TARGET_GROUP_ID}/creatives](#getAssignedCreativesForTargetGroup) GET: Get Assigned Creatives for a Target Group
 
 ## Target Overview
 
