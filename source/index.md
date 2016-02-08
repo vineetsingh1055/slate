@@ -753,7 +753,7 @@ Response Body:
 ```
 
 
-    	      {
+              {
                     "geoIds":
                     [
                         "AA1234123",
@@ -3629,7 +3629,7 @@ This call can be used to update a Geo Audience.
 Request Body:
 ```
 ```
-	      {  
+          {  
                     "geoAudienceDescr": "Geo_Audience_Update",
                     "levelType":[  
                        "GeoPairVisit"
