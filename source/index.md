@@ -225,7 +225,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
 
 ### Description
 
-Get All Geo Audiences.
+Get all Client Geo Audiences.
 
 ### Example
 
@@ -248,56 +248,56 @@ Response Body:
                 [
                     {
                         "id": "geo1009027",
-                        "name": "Test GeoAudience Integration12",
+                        "name": "Test GeoAudience Integration",
                         "geoCount": 2,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009028",
-                        "name": "Test GeoAudience Integration1",
+                        "name": "Test GeoAudiences Integration",
                         "geoCount": 2,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009029",
-                        "name": "test1234",
+                        "name": "Geo_Audience_MGRS10",
                         "geoCount": 20000,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009035",
-                        "name": "TestGeo",
+                        "name": "Geo_Audience_MGRS100",
                         "geoCount": 15,
                         "active": false,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009037",
-                        "name": "Test123",
+                        "name": "Geo_Audience_MGRS1000",
                         "geoCount": 20000,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009039",
-                        "name": "Test12",
+                        "name": "Geo_Audience_ATZ",
                         "geoCount": 8739,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009040",
-                        "name": "New Geo",
+                        "name": "Geo_Audience_ZIP4",
                         "geoCount": 20000,
                         "active": true,
                         "createdAt": "2016-02-02"
                     },
                     {
                         "id": "geo1009042",
-                        "name": "Mac",
+                        "name": "Geo_Audience_ZIP4_New",
                         "geoCount": 3,
                         "active": true,
                         "createdAt": "2016-02-02"
@@ -316,7 +316,7 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences
 `
 
-<a name="getGeoAudienceForClient"></a>
+<a name="getSpecificGeoAudienceForClient"></a>
 ## Get a specific Geo Audience
 <aside class="notice">GET v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
 
@@ -348,7 +348,7 @@ Response Body:
                         "abc123456",
                         "bcd123456"
                     ],
-                    "geoAudienceDescr": "Test GeoAudience Integration12",
+                    "geoAudienceDescr": "Test GeoAudience",
                     "levelType":
                     [
                         "GeoPairVisit"
@@ -610,32 +610,32 @@ Response Code:
 Response Body:
 ```
 ```
-                {
-                    "audienceCode": "nice-segment",
-                    "audienceDescription": "Test Source-Audiences",
-                    "actionType": "SiteVisitor",
-                    "pixelId": 50,
-                    "active": true,
-                    "createdAt": "2015-01-16",
-                    "audiencePoolId": 123,
-                    "slug": "nice-segment"
-                },
-                {
-                    "audienceCode": "1022",
-                    "audienceDescription": "Test Source-Audiences1",
-                    "actionType": "SiteVisitor",
-                    "pixelId": 16873,
-                    "active": true,
-                    "createdAt": "2015-05-31",
-                    "audiencePoolId": 9405,
-                    "slug": "1022"
-                }
+                   {  
+                      "audienceCode":"nice-segment",
+                      "audienceDescription":"Test Source-Audiences",
+                      "actionType":"SiteVisitor",
+                      "pixelId":50,
+                      "active":true,
+                      "createdAt":"2015-01-16",
+                      "audiencePoolId":123,
+                      "slug":"nice-segment"
+                   },
+                   {  
+                      "audienceCode":"1022",
+                      "audienceDescription":"Test Source-Audiences1",
+                      "actionType":"SiteVisitor",
+                      "pixelId":16873,
+                      "active":true,
+                      "createdAt":"2015-05-31",
+                      "audiencePoolId":9405,
+                      "slug":"1022"
+                   }
 ```
 
 `
 https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/source-audiences
 `
-<a name="getAssignedApp-Domain-ListForAdvertiser"></a>
+<a name="getAssignedAppDomainListForAdvertiser"></a>
 
 ## Get All App Domain List
 <aside class="notice">GET /v2/advertisers/{ADVERTISER_ID}/app-domain-lists</aside>
@@ -662,18 +662,18 @@ Response Code:
 Response Body:
 ```
 ```
-                    {
-                        "id": "1",
-                        "name": "Test_App_Domain_Blacklist",
-                        "listType": "blacklist",
-                        "default": true
-                    },  
-                    {
-                        "id": "2",
-                        "name": "Test_App_Domain_Whitelist",
-                        "listType": "whitelist",
-                        "default": false
-                    }
+                   {  
+                      "id":"1",
+                      "name":"Test_App_Domain_Blacklist",
+                      "listType":"blacklist",
+                      "default":true
+                   },
+                   {  
+                      "id":"2",
+                      "name":"Test_App_Domain_Whitelist",
+                      "listType":"whitelist",
+                      "default":false
+                   }
 ```
 
 `
@@ -685,7 +685,7 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/app-domain-
 
 ### Description
 
-Get all Advertiser geo-audiences.
+Get all Advertiser Geo Audiences.
 
 ### Example
 
@@ -705,24 +705,79 @@ Response Code:
 Response Body:
 ```
 ```
-                {
-                    "id": "geo1008948",
-                    "name": "Testing",
-                    "geoCount": 9,
-                    "active": false,
-                    "createdAt": "2016-01-22"
-                },
-                {
-                    "id": "geo1008949",
-                    "name": "TestG",
-                    "geoCount": 9,
-                    "active": false,
-                    "createdAt": "2016-01-22"
-                }
+                   {  
+                      "id":"geo1008948",
+                      "name":"Geo Audience",
+                      "geoCount":9,
+                      "active":false,
+                      "createdAt":"2016-01-22"
+                   },
+                   {  
+                      "id":"geo1008949",
+                      "name":"Test_Geo_Audience",
+                      "geoCount":9,
+                      "active":false,
+                      "createdAt":"2016-01-22"
+                   }
 ```
 
 `
 https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/geo-audiences
+`
+
+<a name="getSpecificGeoAudienceForAdvertiser"></a>
+## Get a specific Geo Audience
+<aside class="notice">GET v2/clients/{clientSlug}/geo-audiences/{geoAudienceId}</aside>
+
+### Description
+
+Get a specific Geo Audience for Advertiser.
+
+### Example
+
+```
+Request Body:
+```
+```
+                EMPTY
+```
+```
+Response Code:
+```
+```
+                200 OK
+```
+```
+Response Body:
+```
+```
+
+
+    	      {
+                    "geoIds":
+                    [
+                        "AA1234123",
+                        "AA1234223",
+                        "AA1234323",
+                        "AA1234423",
+                        "AA1234523",
+                        "AA1234623",
+                        "AA1234723",
+                        "AA1234823",
+                        "AA1234923"
+                    ],
+                    "geoAudienceDescr": "Test_Geo_Audience",
+                    "levelType":
+                    [
+                        "GeoPairVisit"
+                    ],
+                    "geoType": "MGRS_10"
+               }
+
+```
+
+`
+https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/geo-audiences/geo1008997
 `
 
 <a name="getAssignedTarget-Group-TemplatesForAdvertiser"></a>
@@ -1577,8 +1632,8 @@ Request Body:
 ```
 ```
                 {
-                   "name":"test group",
-                   "listType":"blacklist",
+                   "name": "App_Domain_List_Test",
+                   "listType": "blacklist",
                    "apps":[
 
                    ],
@@ -1586,7 +1641,7 @@ Request Body:
                       "media.photobucket.com",
                       "webmail.excite.com"
                    ],
-                   "default":true
+                   "default": true
                 }
 ```
 ```
@@ -1601,7 +1656,7 @@ Response Body:
 ```
                 {
                    "id": "866",
-                   "name": "test group",
+                   "name": "App_Domain_New_Test",
                    "listType": "blacklist",
                    "domains":
                    [
@@ -1618,11 +1673,12 @@ Response Body:
 https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/app-domain-lists 
 `
 <a name="#addGeoAudiences"></a>
-## Create a Geo-Audiences
+## Create a Geo Audience
 <aside class="notice">POST /v2/advertisers/{ADVERTISER_ID}/geo-audiences</aside>
 
 ### Description
-  
+
+Add a Geo Audience.
 
 ### Example
 
@@ -1630,12 +1686,24 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/app-domain-
 Request Body:
 ```
 ```
-                {
-                "geoAudienceDescr":"test_geos_smoke23",
-                "levelType":["GeoPairVisit"],
-                "geoType":"MGRS_10",
-                "geoIds":["AA1234123","AA1234223","AA1234323","AA1234423","AA1234523","AA1234623","AA1234723","AA1234823","AA1234923","AA1235023"
-                ]
+                {  
+                   "geoAudienceDescr":"Geo_Audience_Testing",
+                   "levelType":[  
+                      "GeoPairVisit"
+                   ],
+                   "geoType":"MGRS_10",
+                   "geoIds":[  
+                      "AA1234123",
+                      "AA1234223",
+                      "AA1234323",
+                      "AA1234423",
+                      "AA1234523",
+                      "AA1234623",
+                      "AA1234723",
+                      "AA1234823",
+                      "AA1234923",
+                      "AA1235023"
+                   ]
                 }
 ```
 ```
@@ -1648,10 +1716,12 @@ Response Code:
 Response Body:
 ```
 ```
-                [
-                {
-                "marketerGeoAudienceId":392,"segmentId":352711,"isHome":false
-                }
+                [  
+                   {  
+                      "marketerGeoAudienceId":392,
+                      "segmentId":352711,
+                      "isHome":false
+                   }
                 ]
 ```
 
@@ -1667,13 +1737,12 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/geo-audienc
 400 Bad Request
 `
 
-| Field               | Void Value |  Response Message                                                                                                          |
-| --------------------|------------|----------------------------------------------------------------------------------------------------------------------------|
-| name              | <<EMPTY>>  | property 'geoAudienceDescr' violated constraint 'Geo audience description is required'                                                                     |
-| geoIds            | <<EMPTY>>       | property 'geoIds' violated constraint 'Geo id's are required'                                                                      |
-| levelType         | <<EMPTY>>         | property 'levelType' violated constraint 'Level type is required'              |
-| geoType           | <<EMPTY>>         | property 'geoType' violated constraint 'Geo type is required' entry'                                         |
-                                                                 |
+| Field             | Void Value |  Response Message                                                                        |
+| ------------------|------------|------------------------------------------------------------------------------------------|
+| name              | <<EMPTY>>  | property 'geoAudienceDescr' violated constraint 'Geo audience description is required'   |
+| levelType         | <<EMPTY>>  | property 'levelType' violated constraint 'Level type is required'                        |
+| geoType           | <<EMPTY>>  | property 'geoType' violated constraint 'Geo type is required' entry'                     |
+| geoIds            | <<EMPTY>>  | property 'geoIds' violated constraint 'Geo id's are required'                            |
 
 <a name="addTargetGroupTemplate"></a>
 ## Create a Target Group Template
@@ -1853,12 +1922,12 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/target-grou
 # App Domain List
 
 <a name="updateAppDomainList"></a>
-## Update a App domain list    
+## Update a App domain List    
 <aside class="notice">PUT /v2/app-domain-lists/{app-domain-lists_ID}</aside>
 
 ### Description
 
-This call can be used to update the app domain list. 
+This call can be used to update the App Domain List. 
 
 ### Example
 
@@ -1866,12 +1935,20 @@ This call can be used to update the app domain list.
 Request Body:
 ```
 ```
-                {
-                "name": "e2e-BL-",
-                "listType": "blacklist",
-                "apps":[{"stores":{"apple":"961084330"}}],
-                "domains":[],
-                "default": false
+                {  
+                   "name":"App_Domain_Lists_Update",
+                   "listType":"blacklist",
+                   "apps":[  
+                      {  
+                         "stores":{  
+                            "apple":"961084330"
+                         }
+                      }
+                   ],
+                   "domains":[  
+                
+                   ],
+                   "default":false
                 }
 ```
 ```
@@ -1888,7 +1965,7 @@ Response Body:
 
                 {
                     "id": "1444",
-                    "name": "e2e-BL-",
+                    "name": "App_Domain_Lists_Test",
                     "listType": "blacklist",
                     "advertiser": "cl1001273",
                     "apps":
@@ -3150,7 +3227,7 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1002027/source-audi
 `
 
 <a name="UpdateSourceAudience"></a>
-## Update a Source Audience
+## Update a Custom Pixel Audience
 <aside class="notice">PUT /v2/advertisers/{ADVERTISER_ID}/source-audiences/{AUDIENCE_CODE}</aside>
 
 ### Description
@@ -3331,7 +3408,7 @@ https://bartender.dstillery.com/openbar-api/v2/campaigns/ca1000001/conversion-ev
 
 ### Description
 
-Update Geo Audience.
+Update Geo Audience for a Client.
 
 ### Example
 
@@ -3374,7 +3451,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/g
 
 ### Description
 
-Get Eligible Geo Types.
+Get Eligible Geo Types for a Client.
 
 ### Example
 
@@ -3423,7 +3500,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/eligible-geo-ty
 
 ### Description
 
-Activate Geo Audiences.
+Activate a Geo Audience for a Client.
 
 ### Example
 
@@ -3458,7 +3535,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/g
 
 ### Description
 
-Deactivate Geo Audiences.
+Deactivate a Geo Audience for a Client.
 
 ### Example
 
@@ -3493,7 +3570,7 @@ https://bartender.dstillery.com/openbar-api/v2/clients/cl1000931/geo-audiences/g
 
 ### Description
 
-Get all Eligible Geotypes of geo-audiences.
+Get all Eligible GeoTypes of Geo Audiences.
 
 ### Example
 
@@ -3552,12 +3629,23 @@ This call can be used to update a Geo Audience.
 Request Body:
 ```
 ```
-                {
-                    "geoAudienceDescr":"Testing252123",
-                    "levelType":["GeoPairVisit"],
+	      {  
+                    "geoAudienceDescr": "Geo_Audience_Update",
+                    "levelType":[  
+                       "GeoPairVisit"
+                    ],
                     "geoType":"MGRS_10",
-                    "geoIds":["AA1234123"
-                    ,"AA1234223","AA1234323","AA1234423","AA1234523","AA1234623","AA1234723","AA1234823","AA1234923"]
+                       "geoIds":[  
+                       "AA1234123",
+                       "AA1234223",
+                       "AA1234323",
+                       "AA1234423",
+                       "AA1234523",
+                       "AA1234623",
+                       "AA1234723",
+                       "AA1234823",
+                       "AA1234923"
+                    ]
                 }
 ```
 ```
@@ -3582,7 +3670,7 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1001273/geo-audienc
 
 ### Description
 
-Activate Geo Audience.
+Activate a Geo Audience.
 
 ### Example
 
@@ -3591,7 +3679,7 @@ Request Body:
 ```
 ```
                 {
-                "active": true
+                    "active": true
                 }
 ```
 ```
@@ -3617,7 +3705,7 @@ https://bartender.dstillery.com/openbar-api/v2/advertisers/cl1001273/geo-audienc
 
 ### Description
 
-Deactivate Geo Audience.
+Deactivate a Geo Audience.
 
 ### Example
 
@@ -3626,7 +3714,7 @@ Request Body:
 ```
 ```
                 {
-                "active": false
+                    "active": false
                 }
 ```
 ```
@@ -5820,9 +5908,11 @@ The table below describes the response codes that will be issued and gives poten
 ## Clients
 
 * [/v2/clients/{CLIENT_ID}](#getClient) GET: Get a Client
+* [/v2/clients/{CLIENT_ID}/advertisers](#getAdvertiserForClient) GET: Get Advertiser for a Client
 * [/v2/clients/{CLIENT_ID}/advertisers](#addAdvertiserToClient) POST: Add an Advertiser to a Client
-* [/v2/clients/{CLIENT_ID}/geo-audiences](#getGeoAudiencesForClient) GET: Get Geo Audiences for a Client
 * [/v2/clients/{CLIENT_ID}/geo-audiences](#addGeoAudienceToClient) POST: Add a Geo Audience for a Client
+* [/v2/clients/{CLIENT_ID}/geo-audiences](#getGeoAudiencesForClient) GET: Get Geo Audiences for a Client
+* [/v2/clients/{CLIENT_ID}/geo-audiences/{GEO_AUDIENCE_ID}](#getSpecificGeoAudienceForClient) GET: Get Specific Geo Audiences for a Client
 
 ## Advertisers
 
@@ -5839,7 +5929,8 @@ The table below describes the response codes that will be issued and gives poten
 * [/v2/advertisers/{ADVERTISER_ID}/target-group-templates](#addTargetGroupTemplate) POST: Add a Target Group Template
 * [/v2/advertisers/{ADVERTISER_ID}/eligible-ad-servers](#getEligibleAdServersForAdvertiser) GET: Get Eligible Ad Servers for an Advertiser
 * [/v2/advertisers/{ADVERTISER_ID}/creatives](#getAssignedCreativesForAdvertiser) GET: Get Assigned Creatives for an Advertiser
-* [/v2/advertisers/{advertiserSlug}/geo-audiences](#getGeoAudiencesForAdvertiser) GET: Get Geo Audiences for an Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/geo-audiences](#getGeoAudiencesForAdvertiser) GET: Get all Geo Audiences for an Advertiser
+* [/v2/advertisers/{ADVERTISER_ID}/geo-audiences/{GEO_AUDIENCE_ID}](#getSpecificGeoAudienceForAdvertiser) GET: Get Specific Geo Audiences for an Advertiser
 * [/v2/advertisers/{ADVERTISER_ID}/geo-audiences](#addGeoAudienceToAdvertiser) POST: Add a Geo Audience for a Advertiser
 * [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#getAppDomainListsForAdvertiser) GET: Get App Domain Lists for a Advertiser
 * [/v2/advertisers/{ADVERTISER_ID}/app-domain-lists](#addAppDomainListsToAdvertiser) POST: Add a App Domain Lists
